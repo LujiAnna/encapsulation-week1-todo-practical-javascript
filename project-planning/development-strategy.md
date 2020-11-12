@@ -1,4 +1,4 @@
-# JavaScript Quiz
+# Practical JavaScript TOdo List
 
 ...
 
@@ -17,6 +17,23 @@
 ---
 
 ## 0.Setup
+
+#### Checklist
+- [x] [repo](https://github.com/LujiAnna/encapsulation-week1-todo-practical-javascript) (with a complete README)
+- [x] [live demo](https://lujianna.github.io/encapsulation-week1-todo-practical-javascript/)
+- Project Planning
+  - [x] [Backlog](https://github.com/LujiAnna/encapsulation-week1-todo-practical-javascript/blob/master/project-planning/backlog.md)
+  - [x] [Development Strategy](https://github.com/LujiAnna/encapsulation-week1-todo-practical-javascript/blob/master/project-planning/development-strategy.md)
+  - [x] [Project board](https://github.com/LujiAnna/encapsulation-week1-todo-practical-javascript/projects/1?add_cards_query=is%3Aopen)
+- Implementation
+  - [ ] Tests for core app object
+  - [ ] Tests for views (optional)
+  - [ ] Initial state in `src/data.js`
+  - [ ] Logs of each user interaction
+
+<!-- the next 4 headers are for Wednesday Check-In -->
+### Progress
+
 
 ---
 
