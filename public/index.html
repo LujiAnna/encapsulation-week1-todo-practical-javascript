@@ -2,40 +2,61 @@
 <html lang='en'>
 
 <head>
-  <meta charset='utf8'>
-  <title></title>
-
-  <link href="./style.css" rel="stylesheet" />
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div id='root'></div>
+    <div class='container'>
+        <h1>Todo</h1>
 
-  <!-- load the testing & reviewing dependencies -->
-  <script src='../lib/gremlins.js'></script>
-  <script src='../lib/chai-and-chai-dom.js'></script>
-  <script src='../lib/describe-it.js'></script>
-  <script src='../lib/deep-clone.js'></script>
-  <script src='../lib/logger.js'></script>
-  <script src='../lib/review-buttons.js'></script>
+        <div>
+            <input type="text" id="new-task" name="new-task" required placeholder="New Todo">
+            <button id="addButton" class="add" type="button" onclick="addTask()">Add</button>
+        </div>
 
-  <!-- load & test the app object -->
-  <script src='../src/app.js'></script>
-  <script src='../src/app.spec.js'></script>
+        <ul id="todo-list">
+        </ul>
 
-  <!-- load your views -->
-  <script src='../src/views/render-todos.js'></script>
+        <div>
+            <button id="delete-all" class="delete-all " type="button " onclick="deleteAll()">Delete All</button>
+        </div>
 
 
-  <!-- load your handlers -->
-  <script src='../src/handlers/toggle-completed.js'></script>
+    </div>
+
+    <script src='script.js'></script>
+
+    <!-- <div id='root'></div> -->
+
+    <!-- load the testing & reviewing dependencies -->
+    <!-- <script src='../lib/gremlins.js'></script>
+    <script src='../lib/chai-and-chai-dom.js'></script>
+    <script src='../lib/describe-it.js'></script>
+    <script src='../lib/deep-clone.js'></script>
+    <script src='../lib/logger.js'></script>
+    <script src='../lib/review-buttons.js'></script> -->
+
+    <!-- load & test the app object -->
+    <!-- <script src='../src/app.js'></script>
+    <script src='../src/app.spec.js'></script> -->
+
+    <!-- load your views -->
+    <!-- <script src='../src/views/render-todos.js'></script> -->
 
 
-  <!-- initialize the web page -->
-  <script src='../src/data.js'></script>
-  <script src='../src/init.js'></script>
+    <!-- load your handlers -->
+    <!-- <script src='../src/handlers/toggle-completed.js'></script> -->
+
+
+    <!-- initialize the web page -->
+    <!-- <script src='../src/data.js'></script>
+    <script src='../src/init.js'></script>  -->
 </body>
 
 </html>
