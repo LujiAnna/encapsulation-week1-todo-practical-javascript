@@ -6,42 +6,39 @@
 
 // document.querySelector("button").onclick = function(event) { … }.
 
-
 console.clear();
-
 
 //Document is the DOM can be accessed in the console with document.window.
 // Tree is from the top, html, body, p etc.
 
-//Problem: User interaction does not provide the correct results.
 //Solution: Add interactivity so the user can manage daily tasks.
 //Break things down into smaller steps and take each step at a time.
 
-
-//Event handling, under interaction is what starts the code execution.
-
+//Event handling, interaction is what starts the code execution.
 var newTaskInput = document.getElementById("new-task"); //Add a new task.
 var addButton = document.getElementById("addButton"); //add button
 var taskHolder = document.getElementById("todo-list"); //ul of #todo-list
-
-
+var deleteAllButton = document.getElementById("delete-all"); //ul of #todo-list
 
 //New task list item
 var createNewTask = function(newTask) {
     var listItem = document.createElement("li");
     //input (text)
     var editInput = document.createElement("input"); //text
-
     //button.edit
     var editButton = document.createElement("button"); //edit button
-
     //button.delete
     var deleteButton = document.createElement("button"); //delete button
 
+    //Set the click handler to the deleteTask function.
+    deleteButton.onclick = deleteTask;
+    // deleteButton.addEventListener("click", deleteTask);
+
     // editInput.innerText = newTask;
+    // grab the input value
     editInput.value = newTask;
 
-    //Each elements, needs appending
+    //Each elements, needs type, class, labelling
     editInput.type = "text";
     editInput.className = "todo-item";
 
@@ -50,7 +47,7 @@ var createNewTask = function(newTask) {
     deleteButton.innerText = "Delete";
     deleteButton.className = "deleteButton";
 
-    //and appending.
+    //and appending to the DOM - list
     listItem.appendChild(editInput);
     listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);
@@ -59,6 +56,7 @@ var createNewTask = function(newTask) {
     return listItem;
 }
 
+// show/display task
 var addTask = function() {
     console.log("Add Task...");
 
@@ -71,13 +69,43 @@ var addTask = function() {
 
     // clear input box
     newTaskInput.value = '';
-    // display function
+}
+
+//Delete all tasks.
+var deleteAll = function() {
+    console.log("Delete All...");
+
+    // remove all children from an element:
+    while (taskHolder.firstChild) {
+        taskHolder.removeChild(taskHolder.firstChild);
+    }
+}
+
+//Delete  task.
+var deleteTask = function() {
+    console.log("Delete task...");
+
+    // let d = document.getElementById("top");
+    // find or assign id to newly created items/tasks
+    // let d_nested = document.getElementById("nested");
+    // let throwawayNode = taskHolder.removeChild(d_nested);
+
+    // let throwawayNode = taskHolder.removeChild(deleteButton);
+
+    // if (node.parentNode) {
+    //     node.parentNode.removeChild(node);
+    // }
+
+    // var listItem = this.parentNode;
+    // var ul = listItem.parentNode;
+    // //Remove the parent list item from the ul.
+    // ul.removeChild(listItem);
+
 }
 
 //Set the click handler to the addTask function.
 // addButton.onclick = addTask;
 // addButton.addEventListener("click", addTask);
-
 
 //Edit an existing task.
 
@@ -108,16 +136,7 @@ var addTask = function() {
 
 
 
-// //Delete task.
-// var deleteTask=function(){
-// 		console.log("Delete Task...");
 
-// 		var listItem=this.parentNode;
-// 		var ul=listItem.parentNode;
-// 		//Remove the parent list item from the ul.
-// 		ul.removeChild(listItem);
-
-// }
 
 
 // //Mark task completed

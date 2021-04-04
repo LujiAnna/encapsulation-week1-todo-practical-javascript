@@ -147,7 +147,7 @@ input#new-task {
     width: 318px;
 }
 
-p>button:hover {
+button:hover {
     color: #0FC57C;
 }
 
